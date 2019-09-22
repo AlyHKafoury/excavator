@@ -10,6 +10,12 @@ pub enum Opcode {
   JMPF,
   JMPB,
   EQ,
+  NEQ,
+  GT,
+  LT,
+  GTQ,
+  LTQ,
+  JEQ,
   IGL,
 }
 
@@ -26,6 +32,12 @@ impl From<u8> for Opcode {
       7 => Opcode::JMPF,
       8 => Opcode::JMPB,
       9 => Opcode::EQ,
+      10 => Opcode::NEQ,
+      11 => Opcode::GT,
+      12 => Opcode::LT,
+      13 => Opcode::GTQ,
+      14 => Opcode::LTQ,
+      15 => Opcode::JEQ,
       _ => Opcode::IGL,
     }
   }
